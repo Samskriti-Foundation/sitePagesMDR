@@ -1,0 +1,76 @@
+<a href="http://127.0.0.1:8080/yoga/" target="_blank">Login</a>
+
+<link rel="stylesheet" type="text/css" href="stylesheet_metallurgy.css" />
+
+
+src="assets/logo_sf.png" alt="Samskrthi" title="Samskrthi logo" 
+
+
+regex /sitePages/(.*)". to $1.html"
+
+url(/a to url(a
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Samskrthi Foundation - Mansucripts Digital Repositories</title>
+    <style>  
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flex-container > div {
+      margin: 3px;
+      padding: 2px;
+      border: 1px solid black;
+      flex-basis: 37%;
+    }
+    .ontheleft {float:left}
+    .ontheright {float:right}
+  </style>
+  <link rel="stylesheet" type="text/css" href="stylesheet_main.css" />
+  </head>
+  <body>
+
+<div id="page_hdr" class="page-header" data-parallax="true" style="background-image: url(bg01.jpg );">
+  <div class="ontheleft"><h1>Samskrthi Foundation</h1></div>
+  <div class="ontheright"><h2>Manuscripts Digital Repositories</h2></div>
+  <!-- <h3>YogaBibliography History Metallurgy Philosophy</h3> -->
+</div>
+    <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" color-on-scroll=" " id="sectionsNav">
+      <div class="flex-container">
+        <!-- <div class="navbar">
+              <div class="collapse navbar-collapse"> -->
+                <ul class="nav navbar-nav">
+                      <li><a id="yoga" href="yogabibliography/_annon_menu.html" target="_blank" onclick="return link_yogabiblio();">Yoga Bibliography</a></li>
+                      <li><a href="history/_annon_menu.html" target="_blank" onclick="return link_history();">History</a></li>
+                      <li><a href="metallurgy/_annon_menu.html" target="_blank"onclick="return link_metallurgy();">Metallurgy</a></li>
+                      <li><a href="philosophy/_annon_menu.html" target="_blank"onclick="return link_history();">Philosophy</a></li>
+                      <li><a href="http://127.0.0.1:8080/yoga/" target="_blank" onclick="return link_yogabiblio();">Science & Technology</a></li>
+                  </ul>
+            <!-- </div>
+        </div> -->
+    </div>
+    </nav>
+    <script type="text/javascript">
+      function link_yogabiblio() {
+        document.getElementById("page_hdr").style.backgroundImage = "url(bg01.jpg)"
+        var anchor = document.getElementById("yoga")
+        anchor.target="_blank"
+        return false
+      }
+      function link_history() {
+        document.getElementById("page_hdr").style.backgroundImage = "url(historylandingpage.jpg)"
+        return false
+      }
+      function link_metallurgy() {
+        document.getElementById("page_hdr").style.backgroundImage = "url(metallurgy.png)"
+        return false
+      }
+    </script>
+  </body>
+</html>
