@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brances of Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-full {
+        background-image: url("assets/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="bg-full h-screen w-screen">
+    <div class="flex h-full w-full justify-center items-center relative">
+      <img src="assets/center_circle.png" class="z-[100]" />
+      <img src="assets/striped_circle.png" class="absolute z-[50]" />
+      <img src="assets/hollow_circle.png" class="absolute z-[10] ml-[400px]" />
+    </div>
+  </body>
 </html>
