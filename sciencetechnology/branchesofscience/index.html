@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brances of Science</title>
+    <title>Branches of Science</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .bg-full {
@@ -11,13 +11,78 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+      .circle-container {
+        position: relative;
+        width: 600px;
+        height: 600px;
+      }
+      .circle-image {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+      }
+      .circle-image:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        cursor: pointer;
+      }
     </style>
   </head>
   <body class="bg-full h-screen w-screen">
-    <div class="flex h-full w-full justify-center items-center relative">
-      <img src="assets/center_circle.png" class="z-[100]" />
-      <img src="assets/striped_circle.png" class="absolute z-[50]" />
-      <img src="assets/hollow_circle.png" class="absolute z-[10] ml-[400px]" />
+    <div class="flex h-full w-full justify-center items-center relavtive">
+      <img src="assets/striped_circle.png" class="absolute" />
+      <img src="assets/center_circle.png" class="absolute" />
+      <div class="circle-container">
+        <img
+          src="assets/circle_formal_science.png"
+          class="circle-image"
+          id="circle1"
+        />
+        <img
+          src="assets/circle_medical_science.png"
+          class="circle-image"
+          id="circle2"
+        />
+        <img
+          src="assets/circle_applied_science.png"
+          class="circle-image"
+          id="circle3"
+        />
+        <img
+          src="assets/circle_social_science.png"
+          class="circle-image"
+          id="circle4"
+        />
+        <img
+          src="assets/circle_natural_science.png"
+          class="circle-image"
+          id="circle5"
+        />
+      </div>
     </div>
+    <script>
+      function positionCircles() {
+        const container = document.querySelector(".circle-container")
+        const radius = container.offsetWidth / 2 - 50
+        const centerX = container.offsetWidth / 2
+        const centerY = container.offsetHeight / 2
+
+        const images = document.querySelectorAll(".circle-image")
+        const totalImages = images.length
+        const angleStep = 360 / totalImages
+
+        images.forEach((image, index) => {
+          const angle = angleStep * index * (Math.PI / 180) // Convert to radians
+          const x = centerX + radius * Math.cos(angle)
+          const y = centerY + radius * Math.sin(angle)
+          image.style.left = `${x}px`
+          image.style.top = `${y}px`
+        })
+      }
+
+      window.onload = positionCircles
+      window.onresize = positionCircles
+    </script>
   </body>
 </html>
