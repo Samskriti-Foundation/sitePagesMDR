@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Branches of Science</title>
+    <title>Natural Sciences</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .bg-full {
-        background-image: url("assets/background.png");
+        background-image: url("../assets/background.png");
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -31,33 +31,44 @@
   </head>
   <body class="bg-full h-screen w-screen">
     <div class="flex h-full w-full justify-center items-center relavtive">
-      <img src="assets/striped_circle.png" class="absolute" />
+      <img src="assets/striped_circle_six.png" class="absolute" />
       <img src="assets/center_circle.png" class="absolute" />
       <div class="circle-container">
         <img
-          src="assets/circle_formal_science.png"
+          src="assets/ecology.png"
           class="circle-image"
           id="circle1"
+          onclick="window.location.href = document.URL + 'formal-sciences/'"
         />
         <img
-          src="assets/circle_medical_science.png"
+          src="assets/earth_sciences.png"
           class="circle-image"
           id="circle2"
+          onclick="window.location.href = document.URL + 'medical-sciences/'"
         />
         <img
-          src="assets/circle_applied_science.png"
+          src="assets/chemistry.png"
           class="circle-image"
           id="circle3"
+          onclick="window.location.href = document.URL + 'applied-sciences/'"
         />
         <img
-          src="assets/circle_social_science.png"
+          src="assets/botany.png"
           class="circle-image"
           id="circle4"
+          onclick="window.location.href = document.URL + 'social-sciences/'"
         />
         <img
-          src="assets/circle_natural_science.png"
+          src="assets/astronomy.png"
           class="circle-image"
           id="circle5"
+          onclick="window.location.href = document.URL + 'natural-sciences/'"
+        />
+        <img
+          src="assets/physics.png"
+          class="circle-image"
+          id="circle5"
+          onclick="window.location.href = document.URL + 'natural-sciences/'"
         />
       </div>
     </div>
