@@ -30,7 +30,25 @@
     </style>
   </head>
   <body class="bg-full h-screen w-screen">
-    <div class="flex h-full w-full justify-center items-center relavtive">
+    <nav class="flex justify-end p-4 pr-8 text-white bg-[#7EFEFE] gap-4">
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')"
+      >
+        <i data-lucide="house" class="text-[#41476A]"></i>
+        <p class="text-[#674C79]">Home</p>
+      </div>
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="history.back()"
+      >
+        <i data-lucide="arrow-big-left-dash" class="text-[#41476A]"></i>
+        <p class="text-[#674C79]">Back</p>
+      </div>
+    </nav>
+    <div
+      class="flex h-[calc(100vh-64px)] w-full justify-center items-center relavtive"
+    >
       <img src="assets/striped_circle_six.png" class="absolute" />
       <img src="assets/center_circle.png" class="absolute" />
       <div class="circle-container">
@@ -94,6 +112,10 @@
 
       window.onload = positionCircles
       window.onresize = positionCircles
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons()
     </script>
   </body>
 </html>
