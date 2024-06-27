@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemistry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-full {
+        background-image: url("assets/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .epilogue {
+        font-family: "Epilogue", sans-serif;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-full h-screen w-screen epilogue">
+    <nav class="flex justify-end p-4 pr-8 text-white bg-[#A9C825] gap-4">
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="window.location.href = document.URL.split('/').slice(0, -3).join('/')"
+      >
+        <i data-lucide="house" class="text-white"></i>
+        <p class="text-[#646464]">Home</p>
+      </div>
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="history.back()"
+      >
+        <i data-lucide="arrow-big-left-dash" class="text-white"></i>
+        <p class="text-[#646464]">Back</p>
+      </div>
+    </nav>
+    <div class="pl-16">
+      <img src="assets/title.png" alt="title" class="pt-8 h-[200px] mb-10" />
+      <p class="text-white text-bold text-3xl max-w-4xl">
+        Around 3000 BCE, ancient Indians were highly skilled in manufacturing
+        various alloys using metals such as zinc, copper, and mercury, which
+        were extensively employed in medicinal preparations for treating various
+        ailments. The practice of chemistry dates back to the Vedic times, with
+        references found in scriptures and Ayurvedic texts like the Charaka and
+        Sushruta Samhitas, as well as in the Artha Shastra and Brihat Samhita.
+        This was also reflected in other fields like glass making, pottery,
+        jewellery, perfume making, showcasing the knowledge and artisanship of
+        our ancestors.
+      </p>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons()
+    </script>
+  </body>
+</html>
