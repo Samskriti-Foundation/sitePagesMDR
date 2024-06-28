@@ -1,18 +1,23 @@
 [
   {
     "id": 1,
-    "document_name": "ABC",
-    "author": "ABC"
+    "document_name": "Agastya Samhita",
+    "author": "Agastya",
+    "toc": "",
+    "uniqueness": "The uniqueness of the \"Agastya Samhita\" lies in its purported insights into ancient ndian knowledge of chemistry, alchemy, and technology. It provides a glimpse into the Cientific and technological advancements that were reportedly known in ancient times."
   },
   {
     "id": 2,
-    "document_name": "ABC",
-    "author": "ABC"
+    "document_name": "Surya Siddhanta",
+    "author": "Aryabhatta",
+    "toc": "The Surya Siddhanta covers a wide range of astronomical topics, including planetary motion, solar and lunar eclipses, trigonometric functions, time measurement, and cosmology. It provides mathematical formulas and methods for performing astronomical calculations..",
+    "uniqueness": "He \"Surya Siddanta\" covers a wide range of astronomical topics, including planetary motion, solar and lunar eclipses, trigonometric functions, time measurement and cosmology. It provides mathematical formulas and methods for performing astronomical calculation."
   },
   {
     "id": 3,
-    "document_name": "ABC",
-    "author": "ABC"
+    "document_name": "Aryabhatiyabhasya",
+    "author": "Aryabhatta",
+    "toc": ""
   },
   {
     "id": 4,
