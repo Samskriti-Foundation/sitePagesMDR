@@ -31,39 +31,60 @@
     </style>
   </head>
   <body class="bg-full h-screen w-screen">
-    <nav class="flex justify-end p-4 pr-8 text-white bg-[#A6C4FF] gap-4">
+    <nav class="flex justify-end p-4 pr-8 text-[#646464] bg-[#A6C4FF] gap-4">
       <div
         class="flex gap-1 cursor-pointer items-center"
         onclick="window.location.href = document.URL.split('/').slice(0, -3).join('/')"
       >
         <i data-lucide="house" class="text-white"></i>
-        <p class="text-[#646464]">Home</p>
+        <p>Home</p>
       </div>
       <div
         class="flex gap-1 cursor-pointer items-center"
         onclick="history.back()"
       >
         <i data-lucide="arrow-big-left-dash" class="text-white"></i>
-        <p class="text-[#646464]">Back</p>
+        <p>Back</p>
       </div>
     </nav>
-    <div class="flex flex-col justify-between h-[calc(100vh-64px)] pl-16">
+    <div
+      class="flex flex-col justify-between min-h-[calc(100vh-64px)] px-16 pb-8"
+    >
       <img
         src="assets/title.png"
         alt="title"
         class="pt-8 self-start max-h-[250px]"
       />
-      <p class="text-white text-bold text-3xl max-w-4xl mb-8">
-        Around 3000 BCE, ancient Indians were highly skilled in manufacturing
-        various alloys using metals such as zinc, copper, and mercury, which
-        were extensively employed in medicinal preparations for treating various
-        ailments. The practice of chemistry dates back to the Vedic times, with
-        references found in scriptures and Ayurvedic texts like the Charaka and
-        Sushruta Samhitas, as well as in the Artha Shastra and Brihat Samhita.
-        This was also reflected in other fields like glass making, pottery,
-        jewellery, perfume making, showcasing the knowledge and artisanship of
-        our ancestors.
-      </p>
+      <div class="flex justify-between flex-wrap gap-4">
+        <p class="text-white text-bold text-3xl max-w-2xl">
+          Around 3000 BCE, ancient Indians were highly skilled in manufacturing
+          various alloys using metals such as zinc, copper, and mercury, which
+          were extensively employed in medicinal preparations for treating
+          various ailments. The practice of chemistry dates back to the Vedic
+          times, with references found in scriptures and Ayurvedic texts like
+          the Charaka and Sushruta Samhitas, as well as in the Artha Shastra and
+          Brihat Samhita. This was also reflected in other fields like glass
+          making, pottery, jewellery, perfume making, showcasing the knowledge
+          and artisanship of our ancestors.
+        </p>
+        <div class="flex justify-evenly flex-wrap items-end">
+          <img
+            src="assets/manuscripts.png"
+            alt="manuscripts"
+            class="h-[200px] w-[250px]"
+          />
+          <img
+            src="assets/books.png"
+            alt="books"
+            class="h-[200px] w-[150px] pr-2"
+          />
+          <img
+            src="assets/articles.png"
+            alt="articles"
+            class="h-[200px] w-[150px]"
+          />
+        </div>
+      </div>
     </div>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>

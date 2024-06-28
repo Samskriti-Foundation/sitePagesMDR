@@ -25,23 +25,23 @@
     </style>
   </head>
   <body class="bg-full h-screen w-screen epilogue">
-    <nav class="flex justify-end p-4 pr-8 text-white bg-[#FBF5D8] gap-4">
+    <nav class="flex justify-end p-4 pr-8 text-[#646464] bg-[#FBF5D8] gap-4">
       <div
         class="flex gap-1 cursor-pointer items-center"
         onclick="window.location.href = document.URL.split('/').slice(0, -3).join('/')"
       >
         <i data-lucide="house" class="text-[#F4844D]"></i>
-        <p class="text-[#646464]">Home</p>
+        <p>Home</p>
       </div>
       <div
         class="flex gap-1 cursor-pointer items-center"
         onclick="history.back()"
       >
         <i data-lucide="arrow-big-left-dash" class="text-[#F4844D]"></i>
-        <p class="text-[#646464]">Back</p>
+        <p>Back</p>
       </div>
     </nav>
-    <div class="flex flex-col justify-between h-[calc(100vh-64px)] pl-16">
+    <div class="flex flex-col justify-between min-h-[calc(100vh-64px)] pl-16">
       <img
         src="assets/title.png"
         alt="title"
