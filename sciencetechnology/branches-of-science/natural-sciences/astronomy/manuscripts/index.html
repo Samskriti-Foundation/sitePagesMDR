@@ -78,7 +78,7 @@
               <th class="py-4">Sl.No</th>
               <th class="py-4">Name</th>
               <th class="py-4">Author</th>
-              <th class="py-4">ID</th>
+              <th class="py-4">Document ID</th>
             </tr>
           </thead>
           <tbody>
@@ -118,8 +118,9 @@
           const row = document.createElement("tr")
           row.className =
             "bg-[#FFEEEE] hover:bg-white opacity-90 hover:opacity-100 cursor-pointer"
-          row.onclick = () =>
-            (window.location.href = `${document.URL}info?id=${item.id}`)
+          row.onclick = () => {
+            window.location.href = `${document.URL}info/?id=${item.id}`
+          }
 
           const cellSlNo = document.createElement("td")
           cellSlNo.className = "py-4 font-bold text-pink"
@@ -150,7 +151,7 @@
         const query = document.getElementById("search-bar").value.toLowerCase()
         const filteredData = data.filter(
           (item) =>
-            item.name.toLowerCase().includes(query) ||
+            item.document_name.toLowerCase().includes(query) ||
             item.author.toLowerCase().includes(query) ||
             item.id.toLowerCase().includes(query)
         )
