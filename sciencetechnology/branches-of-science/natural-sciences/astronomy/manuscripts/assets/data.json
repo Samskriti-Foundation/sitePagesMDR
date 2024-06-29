@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "document_name": "Agastya Samhita",
+    "author": "Agastya",
+    "author_info": "The original authorship of the \"Agastya Samhita\" is attributed to the sage Agastya, one of the Saptarishis (Seven Great Sages) in Hindu mythology. The commentator of the Sudha Hindi Commentary would likely be a modern scholar or pundit who aims to provide insights and explanations for the benefit of readers",
+    "toc": "",
+    "uniqueness": "The uniqueness of the \"Agastya Samhita\" lies in its purported insights into ancient ndian knowledge of chemistry, alchemy, and technology. It provides a glimpse into the Cientific and technological advancements that were reportedly known in ancient times.",
+    "keywords": [
+      "Agastya Samhita",
+      "Sudha Hindi Commentary",
+      "Alchemy",
+      "Chemistry",
+      "Medicine",
+      "Technology",
+      "Ancient Indian Science"
+    ]
+  },
+  {
+    "id": 2,
+    "document_name": "Surya Siddhanta",
+    "author": "Aryabhatta",
+    "author_info": "Aryabhata was an ancient Indian mathematician and astronomer who lived around the 5th century CE. He is one of the most significant figures in the history of Indian mathematics and astronomy. His work, the \"Aryabhatiyam,\" is a foundational text in these fields.",
+    "toc": "The Surya Siddhanta covers a wide range of astronomical topics, including planetary motion, solar and lunar eclipses, trigonometric functions, time measurement, and cosmology. It provides mathematical formulas and methods for performing astronomical calculations.",
+    "summary": "The \"Surya Siddhanta\" is an ancient Indian astronomical text that presents significant insights into various aspects of astronomy, including calculations related to planetary positions, eclipses, and timekeeping. The work is attributed to the Sun (Surya) and is highly regarded in Indian astronomy.",
+    "uniqueness": "He \"Surya Siddanta\" covers a wide range of astronomical topics, including planetary motion, solar and lunar eclipses, trigonometric functions, time measurement and cosmology. It provides mathematical formulas and methods for performing astronomical calculation.",
+    "keywords": [
+      "Surya Siddhanta",
+      "Ancient Indian Astronomy",
+      "Planetary Motion",
+      "Eclipses",
+      "Timekeeping",
+      "Trigonometry",
+      "Cosmology"
+    ]
+  },
+  {
+    "id": 3,
+    "document_name": "Aryabhatiyabhasya",
+    "author": "Aryabhatta",
+    "author_info": "Aryabhata was an ancient Indian mathematician and astronomer who lived around the 5th century CE. He is one of the most significant figures in the history of Indian mathematics and astronomy. His work, the \"Aryabhatiyam,\" is a foundational text in these fields.",
+    "summary": "\"Aryabhatiyabhasya\" is a Commentary on the \"Aryabhatiya,\" an ancient Indian mathematical and astronomical text written by Aryabhata, an influential Indian mathematician and astronomer. The \"Aryabhatiya\" itself is a foundational work in Indian astronomy and mathematics.",
+    "toc": "Aryabhata's 'Aryabhatiya' is a comprehensive mathematical and astronomical treatise that comprises a rich tapestry of mathematical principles, astronomical insights, and computational methods. The work commences with salutations to the divine and the author's introduction, wherein Aryabhata introduces the revolutionary decimal place- value system and the concept of zero, pivotal in shaping the future of mathematics. The text systematically elucidates arithmetic operations, including addition, subtraction, multiplication, and division, offering practical methods for problem-solving. In the realm of astronomy, Aryabhata presents his groundbreaking heliocentric model of the solar system and addresses planetary motion, planetary positions, and eclipses. Throughout the work, discussions on timekeeping, calendar systems, and trigonometric concepts, such as sine and versine functions, further showcase the author's multifaceted genius. The 'Aryabhatiya' stands as a testament to Aryabhata's pioneering spirit, originality, and enduring contributions to mathematics and astronomy, laying the groundwork for future generations of scholars.",
+    "keywords": [
+      "Aryabhatiyabhasya",
+      "Aryabhatiya",
+      "Aryabhata",
+      "Astronomy",
+      "Mathematics",
+      "Commentary"
+    ]
+  },
+  {
+    "id": 4,
+    "document_name": "Aryabhatiyam",
+    "author": "Aryabhata",
+    "author_info": "Aryabhata was an ancient Indian mathematician and astronomer who lived around the 5th century CE. He is one of the most significant figures in the history of Indian mathematics and astronomy. His work, the \"Aryabhatiyam,\" is a foundational text in these fields.",
+    "summary": "The \"Aryabhatiyam\" is an ancient Indian mathematical and astronomical text written by Aryabhata, a renowned Indian mathematician and astronomer. The text contains significant contributions to the fields of mathematics and astronomy and is considered one of the foundational works in these disciplines.",
+    "toc": "Aryabhata's 'Aryabhatiya' is a comprehensive mathematical and astronomical treatise that comprises a rich tapestry of mathematical principles, astronomical insights, and computational methods. The work commences with salutations to the divine and the author's introduction, wherein Aryabhata introduces the revolutionary decimal place value system and the concept of zero, pivotal in shaping the future of mathematics. The text systematically elucidates arithmetic operations, including addition, subtraction, multiplication, and division, offering practical methods for problem-solving. In the realm of astronomy, Aryabhata presents his groundbreaking heliocentric model of the solar system and addresses planetary motion, planetary positions, and eclipses. Throughout the work, discussions on timekeeping, calendar systems, and trigonometric concepts, such as sine and versine functions, further showcase the author's multifaceted genius. The 'Aryabhatiya' stands as a testament to Aryabhata's pioneering spirit, originality, and enduring contributions to mathematics and astronomy, laying the groundwork for future generations of scholars.",
+    "keywords": [
+      "Aryabhatiyam",
+      "Aryabhata",
+      "Astronomy",
+      "Mathematics",
+      "Manuscript"
+    ]
+  }
+]

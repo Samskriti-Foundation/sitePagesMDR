@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-full {
+        background-image: url("../assets/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .font-epilogue {
+        font-family: "Epilogue", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-full min-h-screen max-w-screen font-epilogue">
+    <nav class="flex justify-end p-4 pr-8 text-[#646464] bg-[#A6C4FF] gap-4">
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="window.location.href = document.URL.split('/').slice(0, -3).join('/')"
+      >
+        <i data-lucide="house" class="text-white"></i>
+        <p>Home</p>
+      </div>
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="history.back()"
+      >
+        <i data-lucide="arrow-big-left-dash" class="text-white"></i>
+        <p>Back</p>
+      </div>
+    </nav>
+    <div class="bg-[#FFEEEE] p-4 mt-10">
+      <h1 id="title" class="font-bold text-3xl text-[#DF3F7E] pl-8">
+        <!-- Title -->
+      </h1>
+    </div>
+  </body>
+  <script>
+    lucide.createIcons()
+
+    const params = new URLSearchParams(window.location.search)
+
+    let data = []
+
+    // Function to fetch and display the data
+    async function fetchData() {
+      try {
+        const response = await fetch("../assets/data.json")
+        data = await response.json()
+        displayData()
+      } catch (error) {
+        console.error("Error fetching data:", error)
+      }
+    }
+
+    // Function to display the filtered data
+    function displayData() {
+      const item = data.find((d) => d.id === parseInt(params.get("id")))
+      if (item) {
+        document.getElementById("title").textContent = item.document_name
+      } else {
+        document.getElementById("title").textContent = "Not Found"
+      }
+    }
+
+    fetchData()
+  </script>
+</html>

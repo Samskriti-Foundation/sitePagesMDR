@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Science & Technology</title>
+    <style>
+      .bg-full {
+        background-image: url("assets/background.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body class="bg-full h-screen w-screen">
+    <img
+      src="assets/sadhu_bottom_left.png"
+      class="absolute left-0 bottom-0 h-[300px]"
+    />
+    <div class="flex justify-between p-4">
+      <img src="assets/logo_left.png" />
+      <img src="assets/logo_middle.png" class="h-[100px]" />
+      <img src="assets/logo_right.png" />
+    </div>
+    <div class="flex flex-col items-center mb-4">
+      <img src="assets/text_top.png" />
+      <img src="assets/text_center.png" />
+      <img src="assets/text_bottom.png" />
+    </div>
+    <div class="w-auto absolute right-0 bottom-0 p-4">
+      <div class="flex flex-col items-center">
+        <img src="assets/enter_top.png" />
+        <img
+          src="assets/enter_button.png"
+          class="cursor-pointer"
+          onclick="window.location.href = document.URL + 'branches-of-science'"
+        />
+      </div>
+    </div>
+    <div>
+      <img
+        src="assets/grantas_books.png"
+        class="absolute left-0 right-0 bottom-0 h-[300px] mx-auto"
+      />
+    </div>
+  </body>
+</html>

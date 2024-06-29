@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural Sciences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-full {
+        background-image: url("../assets/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .circle-container {
+        position: relative;
+        width: 600px;
+        height: 600px;
+      }
+      .circle-image {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+      }
+      .circle-image:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-full min-h-screen min-w-screen">
+    <nav class="flex justify-end p-4 pr-8 text-white bg-[#7EFEFE] gap-4">
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')"
+      >
+        <i data-lucide="house" class="text-[#41476A]"></i>
+        <p class="text-[#674C79]">Home</p>
+      </div>
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="history.back()"
+      >
+        <i data-lucide="arrow-big-left-dash" class="text-[#41476A]"></i>
+        <p class="text-[#674C79]">Back</p>
+      </div>
+    </nav>
+    <div
+      class="flex min-h-[calc(100vh-64px)] w-full justify-center items-center relative"
+    >
+      <img src="assets/striped_circle_six.png" class="absolute" />
+      <img src="assets/center_circle.png" class="absolute" />
+      <div class="circle-container">
+        <img
+          src="assets/ecology.png"
+          class="circle-image"
+          id="circle1"
+          onclick="window.location.href = document.URL + 'ecology/'"
+        />
+        <img
+          src="assets/earth_sciences.png"
+          class="circle-image"
+          id="circle2"
+          onclick="window.location.href = document.URL + 'earth-sciences/'"
+        />
+        <img
+          src="assets/chemistry.png"
+          class="circle-image"
+          id="circle3"
+          onclick="window.location.href = document.URL + 'chemistry/'"
+        />
+        <img
+          src="assets/botany.png"
+          class="circle-image"
+          id="circle4"
+          onclick="window.location.href = document.URL + 'botany/'"
+        />
+        <img
+          src="assets/astronomy.png"
+          class="circle-image"
+          id="circle5"
+          onclick="window.location.href = document.URL + 'astronomy/'"
+        />
+        <img
+          src="assets/physics.png"
+          class="circle-image"
+          id="circle5"
+          onclick="window.location.href = document.URL + 'physics/'"
+        />
+      </div>
+    </div>
+    <script>
+      function positionCircles() {
+        const container = document.querySelector(".circle-container")
+        const radius = container.offsetWidth / 2 - 50
+        const centerX = container.offsetWidth / 2
+        const centerY = container.offsetHeight / 2
+
+        const images = document.querySelectorAll(".circle-image")
+        const totalImages = images.length
+        const angleStep = 360 / totalImages
+
+        images.forEach((image, index) => {
+          const angle = angleStep * index * (Math.PI / 180) // Convert to radians
+          const x = centerX + radius * Math.cos(angle)
+          const y = centerY + radius * Math.sin(angle)
+          image.style.left = `${x}px`
+          image.style.top = `${y}px`
+        })
+      }
+
+      window.onload = positionCircles
+      window.onresize = positionCircles
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons()
+    </script>
+  </body>
+</html>

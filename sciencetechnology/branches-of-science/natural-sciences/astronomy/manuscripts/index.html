@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-full {
+        background-image: url("assets/background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .font-epilogue {
+        font-family: "Epilogue", sans-serif;
+      }
+      .text-pink {
+        color: #d0407f;
+      }
+      .text-gray {
+        color: #646464;
+      }
+    </style>
+  </head>
+  <body class="bg-full h-screen max-w-screen font-epilogue">
+    <nav class="flex justify-end p-4 pr-8 text-[#646464] bg-[#A6C4FF] gap-4">
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="window.location.href = document.URL.split('/').slice(0, -3).join('/')"
+      >
+        <i data-lucide="house" class="text-white"></i>
+        <p>Home</p>
+      </div>
+      <div
+        class="flex gap-1 cursor-pointer items-center"
+        onclick="history.back()"
+      >
+        <i data-lucide="arrow-big-left-dash" class="text-white"></i>
+        <p>Back</p>
+      </div>
+    </nav>
+    <div>
+      <div class="flex pt-8 justify-center h-[250px]">
+        <img src="assets/center_title.png" alt="title" />
+      </div>
+      <div class="flex justify-end p-4 mr-16 gap-2 items-end">
+        <div>
+          <input
+            id="search-bar"
+            class="p-3 border-none bg-[#FFEEEE] text-[#756E6E] rounded-md"
+            placeholder="Search..."
+          />
+        </div>
+        <div class="flex flex-col text-center">
+          <h4 class="text-white font-bold text-2xl">Total Items</h4>
+          <p
+            class="bg-[#FFEEEE] text-[#756E6E] font-bold text-2xl py-2 rounded-lg"
+            id="item-count"
+          ></p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto mt-4">
+        <table
+          class="w-full text-center border-separate"
+          style="border-spacing: 0 10px"
+          id="data-table"
+        >
+          <thead>
+            <tr class="text-white bg-[#D0407F]">
+              <th class="py-4">Sl.No</th>
+              <th class="py-4">Name</th>
+              <th class="py-4">Author</th>
+              <th class="py-4">Document ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be appended here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons()
+
+      let data = []
+
+      // Function to fetch and display the data
+      async function fetchData() {
+        try {
+          const response = await fetch("assets/data.json")
+          data = await response.json()
+          displayData(data)
+        } catch (error) {
+          console.error("Error fetching data:", error)
+        }
+      }
+
+      // Function to display data in the table
+      function displayData(data) {
+        const count = data.length
+        document.getElementById("item-count").textContent = count
+
+        const tbody = document
+          .getElementById("data-table")
+          .getElementsByTagName("tbody")[0]
+        tbody.innerHTML = ""
+
+        data.forEach((item, index) => {
+          const row = document.createElement("tr")
+          row.className =
+            "bg-[#FFEEEE] hover:bg-white opacity-90 hover:opacity-100 cursor-pointer"
+          row.onclick = () => {
+            window.location.href = `${document.URL}info/?id=${item.id}`
+          }
+
+          const cellSlNo = document.createElement("td")
+          cellSlNo.className = "py-4 font-bold text-pink"
+          cellSlNo.textContent = index + 1
+          row.appendChild(cellSlNo)
+
+          const cellName = document.createElement("td")
+          cellName.className = "py-4 font-bold text-gray"
+          cellName.textContent = item.document_name
+          row.appendChild(cellName)
+
+          const cellAuthor = document.createElement("td")
+          cellAuthor.className = "py-4 font-bold text-gray"
+          cellAuthor.textContent = item.author
+          row.appendChild(cellAuthor)
+
+          const cellDocumentId = document.createElement("td")
+          cellDocumentId.className = "py-4 font-bold text-gray"
+          cellDocumentId.textContent = item.id
+          row.appendChild(cellDocumentId)
+
+          tbody.appendChild(row)
+        })
+      }
+
+      // Function to filter data based on search input
+      function filterData() {
+        const query = document.getElementById("search-bar").value.toLowerCase()
+        const filteredData = data.filter(
+          (item) =>
+            item.document_name.toLowerCase().includes(query) ||
+            item.author.toLowerCase().includes(query) ||
+            item.id.toLowerCase().includes(query)
+        )
+        displayData(filteredData)
+      }
+
+      // Add event listener to search bar
+      document
+        .getElementById("search-bar")
+        .addEventListener("input", filterData)
+
+      // Call the function to fetch and display the data
+      fetchData()
+    </script>
+  </body>
+</html>
