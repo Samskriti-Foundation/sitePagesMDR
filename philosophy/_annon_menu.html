@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
-        Metullurgy
+        Philosophy
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/x-ico" href="/assets/favicon-49590fbc002f678b0b150e37e6276d71.ico"/>
@@ -101,95 +101,17 @@
 <div class="page-header" data-parallax="true"  style="background-image: url(assets/philosophy.png );margin-top:85px;">
 </div>
 
-<div class="main main-raised" >
-
+<div class="main main-raised">
     <div class="container">
         <div class="section">
-            
-            
-            
             <div class="row">
-                <div class="col-md-12">
-                    
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">104</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">folder</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Documents</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">30</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">book</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Books</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">8</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">people</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Manuscripts</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">66</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">people</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Articles</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">Search</h3>
-                                <a href="search.html">
-                                    <div class="icon icon-info">
-                                       <a href="/home"><i class="material-icons">search</i></a>
-                                    </div>
-                                </a>
-                                <h4 class="category text-gray"><b>Books/Articles/Manuscripts</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="dashboard" class="col-md-12"></div>
             </div>
-
         </div>
-
     </div>
-
 </div>
-
 <footer class="footer" style="position: relative;bottom:0;">
-    <div class="container">
-        
+    <div class="container">  
         <div class="copyright">
         Implemented by Samskriti Foundation , Karnataka</div>
         <!-- <div class="copyright pull-right"> -->
@@ -197,16 +119,18 @@
         <!-- </div> -->
     </div>
 </footer>
+<div class="footer" role="contentinfo"></div>
+<div id="spinner" class="spinner" style="display:none;">
+    Loading&hellip;
+</div>
 
-
-
-    <div class="footer" role="contentinfo"></div>
-
-    <div id="spinner" class="spinner" style="display:none;">
-        Loading&hellip;
-    </div>
-
-    <script type="text/javascript" src="/assets/application-db48eb84b39fac733f71fcf2070bfe52.js" ></script>
+<script src="../renderDashboard.js"></script>
+<script>
+    prefix="/philosophy";
+    jsonKey = "Philosophy"
+    renderDashboard(prefix, jsonKey);
+</script>
+<script type="text/javascript" src="/assets/application-db48eb84b39fac733f71fcf2070bfe52.js" ></script>
 
 </body>
 </html>

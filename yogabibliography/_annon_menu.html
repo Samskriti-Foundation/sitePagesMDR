@@ -90,92 +90,14 @@
 </div>
 
 <div class="main main-raised">
-
     <div class="container">
         <div class="section">
-            
-            
-            
             <div class="row">
-                <div class="col-md-12">
-                    
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">5605</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">folder</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Documents</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">2726</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">book</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Books</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">2285</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">people</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Manuscripts</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">594</h3>
-                                <div class="icon icon-info">
-                                    <i class="material-icons">people</i>
-                                </div>
-                                <h4 class="category text-gray"><b><br/>Articles</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2">
-                        <div class="card card-pricing">
-                            <div class="card-content content-primary">
-                                <h3 class="card-title">Search</h3>
-                                <a href="search.html">
-                                    <div class="icon icon-info">
-                                       <a href="/home"><i class="material-icons">search</i></a>
-                                    </div>
-                                </a>
-                                <h4 class="category text-gray"><b>Books/Articles/Manuscripts</b></h4>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="dashboard" class="col-md-12"></div>
             </div>
-
-            
         </div>
-
     </div>
-
 </div>
-
 <footer class="footer" style="position: relative;bottom:0;">
     <div class="container">
         
@@ -186,16 +108,18 @@
         <!-- </div> -->
     </div>
 </footer>
+<div class="footer" role="contentinfo"></div>
+<div id="spinner" class="spinner" style="display:none;">
+    Loading&hellip;
+</div>
 
-
-
-    <div class="footer" role="contentinfo"></div>
-
-    <div id="spinner" class="spinner" style="display:none;">
-        Loading&hellip;
-    </div>
-
-    <script type="text/javascript" src="/assets/application-1488a1914ac5d3774fecdf9f161568e7.js" ></script>
-
+<script src="../renderDashboard.js"></script>
+<script>
+    prefix="/yogabibliography";
+    jsonKey = "Yogabibliography"
+    renderDashboard(prefix, jsonKey);
+</script>
+<script type="text/javascript" src="/assets/application-1488a1914ac5d3774fecdf9f161568e7.js" ></script>
+    
 </body>
 </html>
