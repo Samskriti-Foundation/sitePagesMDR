@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="../stylesheetFromsitePagesmdr.css" />
+    <script src="construct_url.js"></script>
     <title>Science & Technology</title>
     <style>
       .bg-full {
@@ -11,6 +13,17 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+      }
+      footer {
+        background-color: rgb(0, 119, 255);
+        width: 90%;
+    /*Opacity start*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    /*Opacity end*/
       }
     </style>
   </head>
@@ -35,7 +48,7 @@
         <img
           src="assets/enter_button.png"
           class="cursor-pointer"
-          onclick="window.location.href = document.URL + 'branches-of-science'"
+          onclick="window.location.href = constructURL('branches-of-science')"
         />
       </div>
     </div>
@@ -45,5 +58,46 @@
         class="absolute left-0 right-0 bottom-0 h-[300px] mx-auto"
       />
     </div>
+    <footer>
+    <div class="main main-raised" >
+      <div class="container">
+          <div class="section">
+              <div class="row">
+                  <div id="dashboard" class="col-md-12"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </footer>
+    
+    <!-- <script src="../renderDashboard.js"></script>   -->
+    <script src="../dashboard.js"></script>
+    <script>
+      const dashboardArgs = [
+                             {"ScienceTechnology":"/app/sciencetechnology"},
+                             {"Astronomy":"/app/astronomy"},
+                             {"Botany":"/app/botany"},
+                             {"Chemistry":"/app/chemistry"},
+                             {"EarthSciences":"/app/earthsciences"},
+                             {"Ecology":"/app/ecology"},
+                             {"Physics":"/app/physics"},
+                            ]
+      var dashboards = []
+      dashboardArgs.forEach(element => {
+        Object.entries(element).forEach(([jsonKey, prefix]) => {
+          // console.log('k:', jsonKey, 'v:', prefix);
+          dashboards.push(dashboardCounts(jsonKey, prefix));
+        });
+      });
+      Promise.all(dashboards)
+        .then(values => {
+          totals = totalthem(values);
+          console.log("totals:", totals);
+          render(totals);
+        })
+        .catch(error => {
+          console.error("Error in one of the promises:", error);
+        });
+    </script>
   </body>
 </html>

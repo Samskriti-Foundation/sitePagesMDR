@@ -23,7 +23,7 @@ function newDashboard(key, value) {
     return divColmd2;
   }
   function renderDashboard(prefix, jsonKey) {
-      // url = "74.225.250.241";
+      // url = "192.168.29.58";
       url = "127.0.0.1"; 
       port="5000";
       const divMainTableContainer = document.getElementById("mainTableContainer");
