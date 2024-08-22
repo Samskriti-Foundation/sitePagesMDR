@@ -56,7 +56,7 @@
           src="assets/ecology.png"
           class="circle-image"
           id="circleEcology" title="fetching data" 
-          onclick="window.location.href = document.URL + 'ecology/'"
+          onclick="window.location.href = constructURL('ecology')"
           onmouseover="hoverEcology()"
         />
         <img
@@ -64,35 +64,35 @@
           class="circle-image"
           id="circleEarthSciences" title="fetching data" 
           onmouseover="hoverEarthSciences()"
-          onclick="window.location.href = document.URL + 'earth-sciences/'"
+          onclick="window.location.href = constructURL('earth-sciences')"
         />
         <img
           src="assets/chemistry.png"
           class="circle-image"
           onmouseover="hoverChemistry()" title="fetching data" 
           id="circleChemistry"
-          onclick="window.location.href = document.URL + 'chemistry/'"
+          onclick="window.location.href = constructURL('chemistry')"
         />
         <img
           src="assets/botany.png"
           class="circle-image"
           onmouseover="hoverBotany()" title="fetching data" 
           id="circleBotany"
-          onclick="window.location.href = document.URL + 'botany/'"
+          onclick="window.location.href = constructURL('botany')"
         />
         <img
           src="assets/astronomy.png"
           class="circle-image"
           onmouseover="hoverAstronomy()" title="fetching data" 
           id="circleAstronomy"
-          onclick="window.location.href = document.URL + 'astronomy/'"
+          onclick="window.location.href = constructURL('astronomy')"
         />
         <img
           src="assets/physics.png"
           class="circle-image"
           onmouseover="hoverPhysics()" title="fetching data" 
           id="circlePhysics"
-          onclick="window.location.href = document.URL + 'physics/'"
+          onclick="window.location.href = constructURL('physics')"
         />
       </div>
     </div>
@@ -145,6 +145,13 @@
     </script>
     <!-- <script src="../../../dashboard.js"></script> -->
     <script>
+      function constructURL(subfolder) {
+        var basePath = document.location.protocol + "//" + document.location.host + document.location.pathname;
+        // Remove the file name if present (e.g., index.html)
+        basePath = basePath.replace(/\/[^\/]*$/, '/');
+        return basePath + subfolder + "/index.html";
+    }
+
       function dashboard(jsonKey, prefix, circle) {
         dash = dashboardCounts(jsonKey, prefix);
         dash.then(value => {
