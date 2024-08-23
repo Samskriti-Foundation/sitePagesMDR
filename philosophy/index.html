@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kaushan Script', cursive;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./assets/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.enter-here {
+    position: absolute;
+    top: 300px;
+    left: 250px;
+    cursor: pointer;
+}
+
+.enter-here:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 1200px) {
+    .enter-here {
+        top: 65vh;
+        left: 70vw;
+    }
+}
+
+@media (max-width: 1199px) {
+    .enter-here {
+        top: 60vh;
+        left: 60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .enter-here {
+        top: 70vh;
+        left: 50vw;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .enter-here {
+        top: 70vh;
+        left: 45vw;
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./traditional-indian-philosophy"><img class="enter-here" src="./assets/enter-here.png" alt=""></a>
+    </div>
+</body>
+</html>

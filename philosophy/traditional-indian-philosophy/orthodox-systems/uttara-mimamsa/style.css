@@ -1,0 +1,142 @@
+:root {
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-size: 12px;
+    --text-color: rgb(255, 255, 255);
+    --highlight-color: rgb(139, 36, 1);
+    --nav-bg-color: rgba(233, 233, 233, 0.397);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: var(--font-size);
+}
+
+.nav-bar {
+    height: 40px;
+    width: 100%;
+    background-color:#bb9760a2;
+    position: fixed;
+    top: 0px;
+    z-index: 200;
+}
+
+.icons {
+    position: absolute;
+    right: 70px;
+    padding: 10px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.second-page {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./assets/backgroundImage.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: -300px;
+}
+
+.UMimage {
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: 150px;
+    left: 80px;
+}
+
+.god {
+    position: absolute;
+    z-index: 1;
+}
+
+.god1 { top: 75px; left: 170px; }
+.god2 { top: 110px; left: 270px; }
+.god3 { top: 200px; left: 330px; }
+.god4 { top: 305px; left: 325px; }
+.god5 { top: 390px; left: 260px; }
+.god6 { top: 420px; left: 160px; }
+
+.leaf {
+    position: absolute;
+    z-index: -10;
+}
+
+.orangeLeaf1 { 
+    position: absolute;
+    height: 350px; 
+    left: 240px; 
+    top: -90px; 
+    transform: rotate(20deg); 
+}
+.greenLeaf2 { 
+    position: absolute;
+    height: 150px; 
+    top: 100px; 
+    left: 325px; 
+}
+.orangeLeaf3 { 
+    position: absolute;
+    height: 400px; 
+    top: 60px; 
+    left: 330px; 
+}
+.greenLeaf4 { 
+    position: absolute;
+    height: 170px; 
+    top: 300px; 
+    left: 390px; 
+}
+.orangeLeaf5 { 
+    position: absolute;
+    height: 390px; 
+    top: 300px; 
+    left: 300px; 
+}
+.greenLeaf6 { 
+    position: absolute;
+    height: 290px; 
+    top: 420px; 
+    left: 290px; 
+    transform: rotate(-28deg); 
+}
+
+span {
+    color: var(--highlight-color);
+}
+
+h3 {
+    color: var(--text-color);
+    z-index: 11;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+h3:hover {
+    transform: scale(1.1);
+    z-index: 100;
+}
+
+.Advaita { top: 20px; left: 370px; }
+.Visistadvaita { top: 120px; left: 450px; }
+.Dvaita { top: 220px; left: 510px; }
+.Dvaitadvaita { top: 340px; left: 520px; }
+.Shuddhadaita { top: 460px; left: 450px; z-index: 1; }
+.Achintya { top: 520px; left: 330px; }
+
+a {
+    padding: 10px;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}

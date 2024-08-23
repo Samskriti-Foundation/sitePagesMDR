@@ -1,0 +1,66 @@
+:root {
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --text-color: rgb(139, 36, 1);
+    --nav-bg-color: rgba(233, 233, 233, 0.397);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-bar {
+    height: 40px;
+    width: 100%;
+    background-color:#bb9760a2;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.icons {
+    position: absolute;
+    right: 70px;
+    padding: 10px;
+}
+
+span {
+    color: var(--text-color);
+}
+
+.sixthPage {
+    background-image: url(./assets/backgroundImage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.img-250px-height {
+    height: 250px;
+    width: auto;
+    position: absolute;
+    bottom: 40px;
+}
+
+.Manuscripts {
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+    width: 299px;
+}
+
+.Books {
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+}
+
+.Articles {
+    position: absolute;
+    bottom: 50px;
+    left: 900px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heterodox Systems</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div style="display: flex; gap: 20px; position: absolute; right: 30px; align-items: center;">
+            <button 
+                onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
+                aria-label="Home"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+            </button>
+            <button 
+                onclick="history.back()" 
+                aria-label="Back"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="arrow-big-left-dash" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;color: white;">Back</span>
+            </button>
+        </div>
+    </nav>
+    <div class="fourthPage">    
+        <div class="inner">
+            <img class="HSimage" src="./assets/HSimage.png" alt="">
+            <img class="god god7" src="./assets/god7.png" alt="">
+            <img class="god god8" src="./assets/god8.png" alt="">
+            <img class="god god9" src="./assets/god9.png" alt="">
+            <img class="leaf orangeLeaf1" src="./assets/orangeLeaf.png" alt="">
+            <img class="leaf greenLeaf2" src="./assets/greenLeaf2.png" alt="">
+            <img class="leaf orangeLeaf3" src="./assets/orangeLeaf3.png" alt="">
+            <a href="#">
+                <h3 class="Charvaka"><span>चार्वाक दर्शनम्</span><br>Charvaka</h3>
+            </a>
+            <a href="./Buddhism/">
+                <h3 class="Buddhism"><span>बौद्ध दर्शनम्</span><br>Buddhism</h3>
+            </a>
+            <a href="#">
+                <h3 class="Jainism"><span>जैन दर्शनम्</span><br>Jainism</h3>
+            </a>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons()
+      </script>
+</body>
+</html>

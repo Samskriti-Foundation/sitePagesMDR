@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UttaraMimamsa</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThirdPage</title>
+    <link rel="stylesheet" href="./thirdPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div style="display: flex; gap: 20px; position: absolute; right: 30px; align-items: center;">
+            <button 
+                onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
+                aria-label="Home"
+                style="color: white;background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+            </button>
+            <button 
+                onclick="history.back()" 
+                aria-label="Back"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="arrow-big-left-dash" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;color: white;">Back</span>
+            </button>
+        </div>
+    </nav>
+    <div class="center-container">
+        <div class="second-page">
+            <img class="UMimage" src="./assets/UMimage.png" alt="">
+            <img class="god god1" src="./assets/god1.png" alt="">
+            <img class="god god2" src="./assets/god2.png" alt="">
+            <img class="god god3" src="./assets/god3.png" alt="">
+            <img class="god god4" src="./assets/god4.png" alt="">
+            <img class="god god5" src="./assets/god5.png" alt="">
+            <img class="god god6" src="./assets/god6.png" alt="">
+            <img class="orangeLeaf1" src="./assets/orangeLeaf.png" alt="">
+            <img class="greenLeaf2" src="./assets/greenLeaf2.png" alt="">
+            <img class="orangeLeaf3" src="./assets/orangeLeaf3.png" alt="">
+            <img class="greenLeaf4" src="./assets/greenLeaf4.png" alt="">
+            <img class="orangeLeaf5" src="./assets/orangeLeaf5.png" alt="">
+            <img class="greenLeaf6" src="./assets/greenLeaf6.png" alt="">
+            <a href="#"><h3 class="Advaita"><span>अद्वैत</span><br>Advaita<br>(Shankaracharya)</h3></a>
+            <a href="#"><h3 class="Visistadvaita"><span>विशिष्टाद्वैत</span><br>Visistadvaita<br>(Ramanujacharya)</h3></a>
+            <a href="#"><h3 class="Dvaita"><span>द्वैत</span><br>Dvaita<br>(Madhvacharya)</h3></a>
+            <a href="#"><h3 class="Dvaitadvaita"><span>द्वैताद्वैत</span><br>Dvaitadvaita<br>(Nimbarkacharya)</h3></a>
+            <a href="#"><h3 class="Shuddhadaita"><span>शुद्धाद्वैत</span><br>Shuddhadaita<br>(Vallabhacharya)</h3></a>
+            <a href="#"><h3 class="Achintya"><span>अचिंत्य भेदाभेद</span><br>Achintya<br>Bhedabheda<br>(Chaitanya<br>Maha Prabhu)</h3></a>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons()
+      </script>
+</body>
+</html>
+

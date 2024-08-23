@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sixthPage</title>
+    <link rel="stylesheet" href="./Repository.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div style="display: flex; gap: 20px; position: absolute; right: 30px; align-items: center;">
+            <button 
+                onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
+                aria-label="Home"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="house" class="text-white" style="font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;">Home</span>
+            </button>
+            <button 
+                onclick="history.back()" 
+                aria-label="Back"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="arrow-big-left-dash" class="text-white" style="font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;">Back</span>
+            </button>
+        </div>
+    </nav>
+    <div class="sixthPage">
+        <img class="Manuscripts" src="./assets/Manuscripts.png" alt="">
+        <img class="Books" src="./assets/Books.png" alt="">
+        <img class="Articles" src="./assets/Articles.png" alt="">
+    </div>
+    <script>
+        lucide.createIcons()
+      </script>
+</body>
+</html>
