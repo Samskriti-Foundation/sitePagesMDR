@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div style="display: flex; gap: 20px; position: absolute; right: 30px; align-items: center;">
+            <button 
+                onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
+                aria-label="Home"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+            </button>
+            <button 
+                onclick="history.back()" 
+                aria-label="Back"
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="arrow-big-left-dash" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
+                <span style="display: inline-flex; align-items: center;color: white;">Back</span>
+            </button>
+        </div>
+    </nav>
+    <div class="second-page">
+        <img class="OSimage" src="./assets/OSimage.png" alt="">
+        <img class="leaf orangeLeaf1" src="./assets/orangeLeaf.png" alt="">
+        <img class="leaf greenLeaf2" src="./assets/greenLeaf2.png" alt="">
+        <img class="leaf orangeLeaf3" src="./assets/orangeLeaf3.png" alt="">
+        <img class="leaf greenLeaf4" src="./assets/greenLeaf4.png" alt="">
+        <img class="leaf orangeLeaf5" src="./assets/orangeLeaf5.png" alt="">
+        <img class="leaf greenLeaf6" src="./assets/greenLeaf4.png" alt="">
+        <a href="#">
+            <h3 class="Nyaya"><span>न्याय</span><br>Nyaya</h3>
+        </a>
+        <a href="#">
+            <h3 class="Vaisesika"><span>वैशेषिक</span><br>Vaisesika</h3>
+        </a>
+        <a href="#">
+            <h3 class="Sankya"><span>सांख्य</span><br>Sankya</h3>
+        </a>
+        <a href="#">
+            <h3 class="Yoga"><span>योग</span><br>Yoga</h3>
+        </a>
+        <a href="#">
+            <h3 class="PurvaMimamsa"><span>पूर्व मीमांसा</span><br>Purva<br>Mimamsa</h3>
+        </a>
+        <a href="./uttara-mimamsa/">
+            <h3 class="UttaraMimamsa"><span>उत्तर मीमांसा</span><br>Uttara<br>Mimamsa</h3>
+        </a>
+    </div>
+    <script>
+        lucide.createIcons()
+      </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <link rel="stylesheet" href="./01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="icons">
+            <i class="fa-light fa-house"></i><span>Home</span>
+            <i class="fa-thin fa-backward"></i><span>Back</span>
+        </div>
+    </nav>
+    <div class="second-page">
+        <img class="OSimage" src="./assets/OSimage.png" alt="">
+        <img class="orangeLeaf1" src="./assets/orangeLeaf.png" alt="">
+        <img class="greenLeaf2" src="./assets/greenLeaf2.png" alt="">
+        <img class="orangeLeaf3" src="./assets/orangeLeaf3.png" alt="">
+        <img class="greenLeaf4" src="./assets/greenLeaf4.png" alt="">
+        <img class="orangeLeaf5" src="./assets/orangeLeaf5.png" alt="">
+        <img class="greenLeaf6" src="./assets/greenLeaf4.png" alt="">
+        <a href="#">
+            <h3 class="Nyaya"><span>न्याय</span><br>Nyaya</h3>
+        </a>
+        <a href="#">
+            <h3 class="Vaisesika"><span>वैशेषिक</span><br>Vaisesika</h3>
+        </a>
+        <a href="#">
+            <h3 class="Sankya"><span>सांख्य</span><br>Sankya</h3>
+        </a>
+        <a href="#">
+            <h3 class="Yoga"><span>योग</span><br>Yoga</h3>
+        </a>
+        <a href="#">
+            <h3 class="PurvaMimamsa"><span>पूर्व मीमांसा</span><br>Purva<br>Mimamsa</h3>
+        </a>
+        <a href="thirdPage.html">
+            <h3 class="UttaraMimamsa"><span>उत्तर मीमांसा</span><br>Uttara<br>Mimamsa</h3>
+        </a>
+    </div>
+</body>
+
+</html> -->
