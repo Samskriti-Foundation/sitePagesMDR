@@ -8,24 +8,62 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .nav-bar {
+        height: 40px;
+        width: 100%;
+        background-color: #bb9760a2;
+        position: fixed;
+        top: 0px;
+        z-index: 100;
+    }
+    
+    .nav-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 50px;
+        margin-top: -5px;
+    }
+
+    .nav-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 20px;
+    }
+
+    .nav-button i {
+        color: white;
+    }
+
+    .nav-button span p {
+        color: white;
+        margin-left: 10px;
+    }
+
+    span {
+        color: rgb(139, 36, 1);
+    }
+    </style>
 </head>
 
 <body>
     <nav class="nav-bar">
-        <div style="display: flex; gap: 20px; position: absolute; right: 30px; align-items: center;">
-            <button 
-                onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
-                aria-label="Home"
-                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
-                <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
-                <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+        <div class="nav-buttons">
+            <button onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" aria-label="Home" class="nav-button">
+                <i data-lucide="house" class="icon"></i>
+                <span class="button-text"><p>Home</p></span>
             </button>
-            <button 
-                onclick="history.back()" 
-                aria-label="Back"
-                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
-                <i data-lucide="arrow-big-left-dash" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
-                <span style="display: inline-flex; align-items: center;color: white;">Back</span>
+            <button onclick="window.open('http://192.168.29.58:8080/philosophy/')" aria-label="Login" class="nav-button">
+                <i class="fa-solid fa-right-to-bracket"  style="color: black;font-size: large;"></i>
+                <span class="button-text"><p>Login (Manuscripts Digital Repository)</p></span>
+            </button>
+            <button onclick="history.back()" aria-label="Back" class="nav-button">
+                <i data-lucide="arrow-big-left-dash" class="icon"></i>
+                <span class="button-text"><p>Back</p></span>
             </button>
         </div>
     </nav>
