@@ -14,8 +14,8 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
     }
-    .nav-bar{
-        height:40px;
+    .nav-bar {
+        height: 40px;
         width: 100%;
         background-color: #bb9760a2;
         position: fixed;
@@ -23,7 +23,32 @@
         z-index: 100;
     }
     
-    span{
+    .nav-buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -5px;
+        padding-right: 50px;
+    }
+
+    .nav-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 20px;
+    }
+
+    .nav-button i {
+        color: white;
+    }
+
+    .nav-button span p {
+        color: white;
+        margin-left: 10px;
+    }
+
+    span {
         color: rgb(139, 36, 1);
     }
     
@@ -35,48 +60,48 @@
         width: 100vw;
         position: relative;
     }
-    .icons{
-        position: absolute;
-        right: 70px;
-        padding: 10px;
-    }
-    .TIPimage{
+
+    .TIPimage {
         height: 386px;
         width: 386px;
         position: absolute;
         top: 200px;
-        left: 60px ;
+        left: 60px;
         z-index: 1;
     }
-    .orangeLeaf{
+
+    .orangeLeaf, .greenLeaf {
         height: auto;
         width: auto;
-        transform: rotate(30deg);
         position: absolute;
-        left:  220px;
+    }
+
+    .orangeLeaf {
+        transform: rotate(30deg);
+        left: 220px;
         top: -10px;
     }
-    .greenLeaf{
-        height: auto;
-        width: auto;
-        position: absolute;
+
+    .greenLeaf {
         top: 160px;
         left: 230px;
     }
-    .orthodoxSystems{
+
+    .orthodoxSystems {
         position: absolute;
         top: 200px;
         left: 430px;
         color: white;
     }
-    .HeterodoxSystems{
+
+    .HeterodoxSystems {
         position: absolute;
         top: 400px;
         left: 440px;
         color: white;
-    
     }
-    h3:hover{
+
+    h3:hover {
         transform: scale(1.1);
         transition: transform 0.3s ease;
     }
@@ -85,46 +110,47 @@
         text-decoration: none; 
         color: inherit; 
     }
+
     a:active, a:focus {
         background-color: transparent; 
         outline: none;
-    }</style>
+    }
+    </style>
 </head>
 
 <body>
     <nav class="nav-bar">
-        <div style="display: flex; gap: 20px; position: absolute; right: 30px; align-items: center;">
-            <button 
-                onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
-                aria-label="Home"
-                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
-                <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
-                <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+        <div class="nav-buttons">
+            <button onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" aria-label="Home" class="nav-button">
+                <i data-lucide="house" class="icon"></i>
+                <span class="button-text"><p>Home</p></span>
             </button>
-            <button 
-                onclick="history.back()" 
-                aria-label="Back"
-                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
-                <i data-lucide="arrow-big-left-dash" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
-                <span style="display: inline-flex; align-items: center;color: white;">Back</span>
+            <button onclick="window.open('http://192.168.29.58:8080/philosophy/')" aria-label="Login" class="nav-button">
+                <i class="fa-solid fa-right-to-bracket"  style="color: black;font-size: large;"></i>
+                <span class="button-text"><p>Login (Manuscripts Digital Repository)</p></span>
+            </button>
+            <button onclick="history.back()" aria-label="Back" class="nav-button">
+                <i data-lucide="arrow-big-left-dash" class="icon"></i>
+                <span class="button-text"><p>Back</p></span>
             </button>
         </div>
     </nav>
+
     <div class="firstScreen">
         <img class="TIPimage" src="./assets/TIP.png" alt="">
         <img class="orangeLeaf" src="./assets/orangeLeaf.png" alt="">
         <img class="greenLeaf" src="./assets/greenLeaf.png" alt="">
         <a href="orthodox-systems/">
-            <h3 class="orthodoxSystems"><span style="color:rgb(139, 36, 1)">आस्तिक दर्शनम्</span><br> Orthodox Systems
-            </h3>
+            <h3 class="orthodoxSystems"><span style="color:rgb(139, 36, 1)">आस्तिक दर्शनम्</span><br> Orthodox Systems</h3>
         </a>
         <a href="heterodox-systems/">
-            <h3 class="HeterodoxSystems"><span style="color:rgb(139, 36, 1)">नास्तिक दर्शनम् </span><br> Heterodox
-            Systems</h3>
+            <h3 class="HeterodoxSystems"><span style="color:rgb(139, 36, 1)">नास्तिक दर्शनम्</span><br> Heterodox Systems</h3>
         </a>
     </div>
 </body>
 <script>
     lucide.createIcons()
-  </script>
+</script>
 </html>
+
+
