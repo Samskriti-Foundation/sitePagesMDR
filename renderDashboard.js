@@ -23,13 +23,10 @@ function newDashboard(key, value) {
     return divColmd2;
   }
   function renderDashboard(prefix, jsonKey) {
-      // url = "192.168.29.58";
-      url = "127.0.0.1"; 
-      port="5000";
-      const divMainTableContainer = document.getElementById("mainTableContainer");
+      // const divMainTableContainer = document.getElementById("mainTableContainer");
       // const dashboard = document.getElementById("dashboard"); dashboard.innerHTML = "";
       // while (dashboard.firstChild) {dashboard.removeChild(dashboard.lastChild);}
-      fetch('http://' + url + ':' + port + prefix)
+      fetch(serverUrlPort() + prefix)
           .then(response => response.json())
           .then(json => {
         dataArray = json[jsonKey];
@@ -39,24 +36,26 @@ function newDashboard(key, value) {
         divTblContainer.className = "metro-nav metro-fix-view";
         total = 0;
           Object.entries(dataArray).forEach(([key, value]) => {
-          divInnerTableContainer =  document.createElement("div");
-          divInnerTableContainer.className = "metro-nav-block nav-block-purple";
-          element_i = document.createElement("i");
-          element_i.className = "glyphicon glyphicon-file";
-          if (key=="Users") element_i.className = "glyphicon glyphicon-user";
-              else {element_i.className = "glyphicon glyphicon-file"; total += value;}
-          divInfo =  document.createElement("div");
-          divInfo.className = "info";
-          divInfo.innerHTML = value;
-          divStatus = document.createElement("div");
-          divStatus.className = "status";
-          divStatus.innerHTML = key;
-          divInnerTableContainer.appendChild(divStatus);
-          divInnerTableContainer.appendChild(element_i);
-          divInnerTableContainer.appendChild(divInfo);
-          divTblContainer.appendChild(divInnerTableContainer);
-          const dashboard = document.getElementById("dashboard");
-          dashboard.appendChild(newDashboard(key, value));
+            if (key != 'Subjects') {
+              divInnerTableContainer =  document.createElement("div");
+              divInnerTableContainer.className = "metro-nav-block nav-block-purple";
+              element_i = document.createElement("i");
+              element_i.className = "glyphicon glyphicon-file";
+              if (key=="Users") element_i.className = "glyphicon glyphicon-user";
+                  else {element_i.className = "glyphicon glyphicon-file"; total += value;}
+              divInfo =  document.createElement("div");
+              divInfo.className = "info";
+              divInfo.innerHTML = value;
+              divStatus = document.createElement("div");
+              divStatus.className = "status";
+              divStatus.innerHTML = key;
+              divInnerTableContainer.appendChild(divStatus);
+              divInnerTableContainer.appendChild(element_i);
+              divInnerTableContainer.appendChild(divInfo);
+              divTblContainer.appendChild(divInnerTableContainer);
+              const dashboard = document.getElementById("dashboard");
+              dashboard.appendChild(newDashboard(key, value));
+            }
       });
       divInnerTableContainer =  document.createElement("div");
       divInnerTableContainer.className = "metro-nav-block nav-block-purple";
@@ -74,7 +73,7 @@ function newDashboard(key, value) {
       divTblContainer.appendChild(divInnerTableContainer);
       const dashboard = document.getElementById("dashboard");
       dashboard.appendChild(newDashboard("Documents", total));
-      divMainTableContainer.appendChild(divTblContainer);
+      // divMainTableContainer.appendChild(divTblContainer);
     }
       else {
         const para = document.createElement("p");

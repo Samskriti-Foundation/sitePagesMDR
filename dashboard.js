@@ -1,7 +1,5 @@
 function dashboardCounts(jsonKey, prefix) {
-  var url = "127.0.0.1";
-  var port = "5000";
-  return fetch('http://' + url + ':' + port + prefix)
+  return fetch(serverUrlPort() + prefix)
     .then(response => response.json())
     .then(json => {
       const dataArray = json[jsonKey];
@@ -14,7 +12,7 @@ function dashboardCounts(jsonKey, prefix) {
     });
 }
 function totalthem(dataArrays) {
-  totals = {Manuscripts:0, Books:0, Articles:0, Users:0};
+  totals = {Manuscripts:0, Books:0, Articles:0, Users:0, Subjects:0};
   dataArrays.forEach(function (arrayItem) {
     Object.entries(arrayItem).forEach(([key, value]) => {
       totals[key] += value;
@@ -24,30 +22,32 @@ function totalthem(dataArrays) {
 }
 
 function render(dataArray) {
-  const divMainTableContainer = document.getElementById("mainTableContainer");
+  // const divMainTableContainer = document.getElementById("mainTableContainer");
   const divTblContainer = document.createElement("div");
   divTblContainer.id = "tableContainer";
   divTblContainer.className = "metro-nav metro-fix-view";
   total = 0;
     Object.entries(dataArray).forEach(([key, value]) => {
-    divInnerTableContainer =  document.createElement("div");
-    divInnerTableContainer.className = "metro-nav-block nav-block-purple";
-    element_i = document.createElement("i");
-    element_i.className = "glyphicon glyphicon-file";
-    if (key=="Users") element_i.className = "glyphicon glyphicon-user";
-        else {element_i.className = "glyphicon glyphicon-file"; total += value;}
-    divInfo =  document.createElement("div");
-    divInfo.className = "info";
-    divInfo.innerHTML = value;
-    divStatus = document.createElement("div");
-    divStatus.className = "status";
-    divStatus.innerHTML = key;
-    divInnerTableContainer.appendChild(divStatus);
-    divInnerTableContainer.appendChild(element_i);
-    divInnerTableContainer.appendChild(divInfo);
-    divTblContainer.appendChild(divInnerTableContainer);
-    const dashboard = document.getElementById("dashboard");
-    dashboard.appendChild(newDashboard(key, value));
+      if (key != 'Subjects') {
+      divInnerTableContainer =  document.createElement("div");
+      divInnerTableContainer.className = "metro-nav-block nav-block-purple";
+      element_i = document.createElement("i");
+      element_i.className = "glyphicon glyphicon-file";
+      if (key=="Users") element_i.className = "glyphicon glyphicon-user";
+          else {element_i.className = "glyphicon glyphicon-file"; total += value;}
+      divInfo =  document.createElement("div");
+      divInfo.className = "info";
+      divInfo.innerHTML = value;
+      divStatus = document.createElement("div");
+      divStatus.className = "status";
+      divStatus.innerHTML = key;
+      divInnerTableContainer.appendChild(divStatus);
+      divInnerTableContainer.appendChild(element_i);
+      divInnerTableContainer.appendChild(divInfo);
+      divTblContainer.appendChild(divInnerTableContainer);
+      const dashboard = document.getElementById("dashboard");
+      dashboard.appendChild(newDashboard(key, value));
+      }
 });
 divInnerTableContainer =  document.createElement("div");
 divInnerTableContainer.className = "metro-nav-block nav-block-purple";
@@ -65,11 +65,11 @@ divInnerTableContainer.appendChild(divInfo);
 divTblContainer.appendChild(divInnerTableContainer);
 const dashboard = document.getElementById("dashboard");
 dashboard.appendChild(newDashboard("Documents", total));
-divMainTableContainer.appendChild(divTblContainer);
+// divMainTableContainer.appendChild(divTblContainer);
 }
 
 function newDashboard(key, value) { 
-  const icons = {Documents: "folder", Articles: "people", Books: "book", Manuscripts: "people",Users: "people"};
+  const icons = {Documents: "folder", Articles: "people", Books: "book", Manuscripts: "people",Users: "people", Subjects: 'book'};
   const divColmd2 = document.createElement("div"); divColmd2.className = "col-md-2";
   const divCard  = document.createElement("div"); divCard.className = "card card-pricing";
   const divCardContent  = document.createElement("div"); divCardContent.className = "card-content content-primary";

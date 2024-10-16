@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .nav-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 20px;
+    }
+    </style>
 </head>
 
 <body>
@@ -19,6 +29,10 @@
                 style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
                 <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
                 <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+            </button>
+            <button onclick="window.open('http://127.0.0.1:8080/philosophy/')" aria-label="Login" class="nav-button">
+                    <i class="fa-solid fa-right-to-bracket"  style="color: black;font-size: large;"></i>
+                <span class="button-text"><p>Login (Manuscripts Digital Repository)</p></span>
             </button>
             <button 
                 onclick="history.back()" 
@@ -59,6 +73,8 @@
     <script>
         lucide.createIcons()
       </script>
+<script src="../../../serverUrl.js"></script>
+<script>updateButtonOnclickWithRegex(); // update the onclick URLs with the server IP and port</script>
 </body>
 
 </html>

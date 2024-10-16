@@ -125,25 +125,25 @@
     </script>
     <script>
       function hoverAstronomy() {
-        if (document.getElementById('circleAstronomy').title == "fetching data") dashboard("Astronomy", "/app/astronomy", "circleAstronomy");
+        if (document.getElementById('circleAstronomy').title == "fetching data") dashboard("Astronomy", "/sub/astronomy", "circleAstronomy");
       }
       function hoverBotany() {
-        if (document.getElementById('circleBotany').title == "fetching data") dashboard("Botany", "/app/botany", "circleBotany");
+        if (document.getElementById('circleBotany').title == "fetching data") dashboard("Botany", "/sub/botany", "circleBotany");
       }
       function hoverChemistry() {
-        if (document.getElementById('circleChemistry').title == "fetching data") dashboard("Chemistry", "/app/chemistry", "circleChemistry");
+        if (document.getElementById('circleChemistry').title == "fetching data") dashboard("Chemistry", "/sub/chemistry", "circleChemistry");
       }
       function hoverEarthSciences() {
-        if (document.getElementById('circleEarthSciences').title == "fetching data") dashboard("EarthSciences", "/app/earthsciences", "circleEarthSciences");
+        if (document.getElementById('circleEarthSciences').title == "fetching data") dashboard("Earthsciences", "/sub/earthsciences", "circleEarthSciences");
       }
       function hoverEcology() {
-        if (document.getElementById('circleEcology').title == "fetching data") dashboard("Ecology", "/app/ecology", "circleEcology");
+        if (document.getElementById('circleEcology').title == "fetching data") dashboard("Ecology", "/sub/ecology", "circleEcology");
       }
       function hoverPhysics() {
-        if (document.getElementById('circlePhysics').title == "fetching data") dashboard("Physics", "/app/physics", "circlePhysics");
+        if (document.getElementById('circlePhysics').title == "fetching data") dashboard("Physics", "/sub/physics", "circlePhysics");
       }
     </script>
-    <!-- <script src="../../../dashboard.js"></script> -->
+    <script src="../../../serverUrl.js"></script>
     <script>
       function constructURL(subfolder) {
         var basePath = document.location.protocol + "//" + document.location.host + document.location.pathname;
@@ -165,9 +165,7 @@
         });
       }
       function dashboardCounts(jsonKey, prefix) {
-        var url = "127.0.0.1";
-        var port = "5000";
-        return fetch('http://' + url + ':' + port + prefix)
+        return fetch(serverUrlPort() + prefix)
           .then(response => response.json())
           .then(json => {
             const dataArray = json[jsonKey];

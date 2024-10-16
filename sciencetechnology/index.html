@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="../stylesheetFromsitePagesmdr.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <script src="construct_url.js"></script>
     <title>Science & Technology</title>
     <style>
@@ -68,9 +69,8 @@
           </div>
       </div>
     </div>
-    </footer>
-    
-    <!-- <script src="../renderDashboard.js"></script>   -->
+    </footer>    
+    <!-- <script src="../renderDashboard.js"></script>   
     <script src="../dashboard.js"></script>
     <script>
       const dashboardArgs = [
@@ -98,6 +98,12 @@
         .catch(error => {
           console.error("Error in one of the promises:", error);
         });
-    </script>
+    </script> -->
+    <script src="../serverUrl.js"></script>
+    <script src="../renderDashboard.js"></script>
+    <script>prefix="/app/sciencetechnology";
+      jsonKey = "ScienceTechnology"
+      renderDashboard(prefix, jsonKey);
+      </script>
   </body>
 </html>

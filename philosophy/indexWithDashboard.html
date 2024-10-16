@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../../stylesheetFromsitePagesmdr.css" /> 
+    <link rel="stylesheet" href="../stylesheetFromsitePagesmdr.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Kaushan Script', cursive;
+        overflow: hidden;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('./assets/background.jpg');
+        background-position: center;
+        /* background-repeat: no-repeat; */
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .enter-here {
+        position: absolute;
+        top: 300px;
+        left: 250px;
+        cursor: pointer;
+    }
+
+    .enter-here:hover {
+        transform: scale(1.1);
+    }
+
+    @media (min-width: 1200px) {
+        .enter-here {
+            top: 65vh;
+            left: 70vw;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .enter-here {
+            top: 60vh;
+            left: 60vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .enter-here {
+            top: 70vh;
+            left: 50vw;
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .enter-here {
+            top: 70vh;
+            left: 45vw;
+            font-size: 2rem;
+        }
+    }
+    footer {
+            background-color: rgb(0, 119, 255);
+            width: 90%;
+        /*Opacity start*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.80;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+        /*Opacity end*/
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <a href="./traditional-indian-philosophy/index.html"><img class="enter-here" src="./assets/enter-here.png" alt=""></a>
+    </div> -->
+    <footer>
+    <div class="main main-raised" >
+      <div class="container">
+          <div class="section">
+              <div class="row">
+                  <div id="dashboard" class="col-md-12"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+</footer>
+</body>
+<script src="../serverUrl.js"></script>
+<script src="../renderDashboard.js"></script>
+<script>prefix="/app/philosophy";
+  jsonKey = "Philosophy"
+  renderDashboard(prefix, jsonKey);
+  </script>
+</html>
