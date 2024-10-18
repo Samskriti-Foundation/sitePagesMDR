@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container" >
+        <nav class="nav-bar">
+            <div class="nav-buttons">
+                <button onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" aria-label="Home" class="nav-button">
+                    <i data-lucide="house" class="icon"></i>
+                    <span class="button-text"><p>Home</p></span>
+                </button>
+                <button onclick="window.open('http://192.168.29.58:8080/philosophy/')" aria-label="Login" class="nav-button">
+                    <i class="fa-solid fa-right-to-bracket"  style="color: black;font-size: large;"></i>
+                    <span class="button-text"><p>Login (Manuscripts Digital Repository)</p></span>
+                </button>
+                <button onclick="history.back()" aria-label="Back" class="nav-button">
+                    <i data-lucide="arrow-big-left-dash" class="icon"></i>
+                    <span class="button-text"><p>Back</p></span>
+                </button>
+            </div>
+        </nav>
+        <div class="inner-container" >
+            <h1>Login as Guest with this Email Id("<span>User.Guest@gmail.com</span>") and Password(<span>userguest</span>) </h1>
+            <h1>Lagin as Admin with Your own Credentials</h1>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons()
+      </script>
+</body>
+</html>
+

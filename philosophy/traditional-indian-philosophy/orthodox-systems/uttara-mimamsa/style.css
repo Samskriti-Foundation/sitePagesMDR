@@ -15,15 +15,6 @@ body {
     font-size: var(--font-size);
 }
 
-.nav-bar {
-    height: 40px;
-    width: 100%;
-    background-color:#bb9760a2;
-    position: fixed;
-    top: 0px;
-    z-index: 200;
-}
-
 .icons {
     position: absolute;
     right: 70px;
@@ -134,9 +125,44 @@ h3:hover {
 .Shuddhadaita { top: 460px; left: 450px; z-index: 1; }
 .Achintya { top: 520px; left: 330px; }
 
+.nav-bar {
+    height: 40px;
+    width: 100%;
+    background-color: #bb9760a2;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5px;
+    padding-right: 50px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.nav-button i {
+    color: white;
+}
+
+.nav-button span p {
+    color: white;
+    margin-left: 10px;
+}
+
 a {
     padding: 10px;
     display: inline-block;
     height: 100px;
     width: 100px;
 }
+

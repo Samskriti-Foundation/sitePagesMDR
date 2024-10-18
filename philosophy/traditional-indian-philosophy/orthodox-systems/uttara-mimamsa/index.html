@@ -23,9 +23,13 @@
             <button 
                 onclick="window.location.href = document.URL.split('/').slice(0, -2).join('/')" 
                 aria-label="Home"
-                style="color: white;background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
+                style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
                 <i data-lucide="house" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
                 <span style="display: inline-flex; align-items: center;color: white;">Home</span>
+            </button>
+            <button onclick="window.open('http://127.0.0.1:8080/philosophy/')" aria-label="Login" class="nav-button">
+                    <i class="fa-solid fa-right-to-bracket"  style="color: black;font-size: large;"></i>
+                <span class="button-text"><p>Login (Manuscripts Digital Repository)</p></span>
             </button>
             <button 
                 onclick="history.back()" 
@@ -33,6 +37,7 @@
                 style="background: none; border: none; cursor: pointer; font-size: 16px; padding: 10px; transition: border-bottom 0.3s; display: flex; align-items: center; gap: 5px;">
                 <i data-lucide="arrow-big-left-dash" class="text-white" style="color: white;font-size: 20px; display: inline-flex; align-items: center;"></i>
                 <span style="display: inline-flex; align-items: center;color: white;">Back</span>
+                <span style="display: inline-flex; align-items: center;color: white;" onclick="window.open('/philosophy/traditional-indian-philosophy/Instructions/')" >Guest</span>
             </button>
         </div>
     </nav>
