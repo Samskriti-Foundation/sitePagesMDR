@@ -17,6 +17,9 @@
         align-items: center;
         padding: 5px 20px;
     }
+    .nav-button:hover:before {
+        content:"hint: try login with user - guest@mailinator.com and password - guest";
+    }
     </style>
 </head>
 
@@ -51,22 +54,22 @@
         <img class="leaf greenLeaf4" src="./assets/greenLeaf4.png" alt="">
         <img class="leaf orangeLeaf5" src="./assets/orangeLeaf5.png" alt="">
         <img class="leaf greenLeaf6" src="./assets/greenLeaf4.png" alt="">
-        <a href="#">
+        <a href="#" id="Nyaya" title="fetching data" onmouseover="hoverNyaya()">
             <h3 class="Nyaya"><span>न्याय</span><br>Nyaya</h3>
         </a>
-        <a href="#">
+        <a href="#" id="Vaisesika" title="fetching data" onmouseover="hoverVaisesika()">
             <h3 class="Vaisesika"><span>वैशेषिक</span><br>Vaisesika</h3>
         </a>
-        <a href="#">
+        <a href="#" id="Sankhya" title="fetching data" onmouseover="hoverSankhya()">
             <h3 class="Sankya"><span>सांख्य</span><br>Sankya</h3>
         </a>
-        <a href="#">
+        <a href="#" id="Yoga" title="fetching data" onmouseover="hoverYoga()">
             <h3 class="Yoga"><span>योग</span><br>Yoga</h3>
         </a>
-        <a href="#">
+        <a href="#" id="PurvaMimamsa" title="fetching data" onmouseover="hoverPurvaMimamsa()">
             <h3 class="PurvaMimamsa"><span>पूर्व मीमांसा</span><br>Purva<br>Mimamsa</h3>
         </a>
-        <a href="./uttara-mimamsa/">
+        <a href="./uttara-mimamsa/" id="UttaraMimamsa" title="fetching data" onmouseover="hoverUttaraMimamsa()">
             <h3 class="UttaraMimamsa"><span>उत्तर मीमांसा</span><br>Uttara<br>Mimamsa</h3>
         </a>
     </div>
@@ -74,7 +77,39 @@
         lucide.createIcons()
       </script>
 <script src="../../../serverUrl.js"></script>
-<script>updateButtonOnclickWithRegex(); // update the onclick URLs with the server IP and port</script>
+<script src="../../../dashboard.js"></script>
+<script>updateButtonOnclickWithRegex(); // update the onclick URLs with the server IP and port
+    function hoverNyaya() {
+        if (document.getElementById('Nyaya').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Nyaya",
+       "Nyaya");
+    }
+    function hoverVaisesika() {
+        if (document.getElementById('Vaisesika').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Vaisesika",
+       "Vaisesika");
+    }
+    function hoverYoga() {
+        if (document.getElementById('Yoga').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Yoga",
+       "Yoga");
+    }
+    function hoverSankhya() {
+        if (document.getElementById('Sankhya').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Sankhya",
+       "Sankhya");
+    }
+    function hoverPurvaMimamsa() {
+        if (document.getElementById('PurvaMimamsa').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Purva Mimamsa",
+       "PurvaMimamsa");
+    }
+    function hoverUttaraMimamsa() {
+        if (document.getElementById('UttaraMimamsa').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Uttara Mimamsa",
+       "UttaraMimamsa");
+    }
+</script>
 </body>
 
 </html>

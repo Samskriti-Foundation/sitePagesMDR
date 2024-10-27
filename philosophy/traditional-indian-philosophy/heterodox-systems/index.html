@@ -16,6 +16,9 @@
         align-items: center;
         padding: 5px 20px;
     }
+    .nav-button:hover:before {
+        content:"hint: try login with user - guest@mailinator.com and password - guest";
+    }
     </style>
 </head>
 <body>
@@ -50,13 +53,13 @@
             <img class="leaf orangeLeaf1" src="./assets/orangeLeaf.png" alt="">
             <img class="leaf greenLeaf2" src="./assets/greenLeaf2.png" alt="">
             <img class="leaf orangeLeaf3" src="./assets/orangeLeaf3.png" alt="">
-            <a href="#">
+            <a href="#" id="Carvaka" title="fetching data" onmouseover="hoverCarvaka()">
                 <h3 class="Charvaka"><span>चार्वाक दर्शनम्</span><br>Charvaka</h3>
             </a>
-            <a href="./Buddhism/">
+            <a href="./Buddhism/" id="Bauddha" title="fetching data" onmouseover="hoverBauddha()">
                 <h3 class="Buddhism"><span>बौद्ध दर्शनम्</span><br>Buddhism</h3>
             </a>
-            <a href="#">
+            <a href="#" id="Jaina" title="fetching data" onmouseover="hoverJaina()">
                 <h3 class="Jainism"><span>जैन दर्शनम्</span><br>Jainism</h3>
             </a>
         </div>
@@ -65,6 +68,23 @@
         lucide.createIcons()
       </script>
 <script src="../../../serverUrl.js"></script>
-<script>updateButtonOnclickWithRegex(); // update the onclick URLs with the server IP and port</script>
+<script src="../../../dashboard.js"></script>
+<script>updateButtonOnclickWithRegex(); // update the onclick URLs with the server IP and port
+function hoverCarvaka() {
+        if (document.getElementById('Carvaka').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Carvaka",
+       "Carvaka");
+    }
+    function hoverBauddha() {
+        if (document.getElementById('Bauddha').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Bauddha",
+       "Bauddha");
+    }
+    function hoverJaina() {
+        if (document.getElementById('Jaina').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Jaina",
+       "Jaina");
+    }
+</script>
 </body>
 </html>

@@ -38,35 +38,42 @@
         <img
           src="assets/circle_formal_science.png"
           class="circle-image"
-          id="circle1"
+          id="circleFormal"
+          onmouseover="hoverFormal()" title="fetching data"
           onclick="window.location.href = constructURL('formal-sciences')"
         />
         <img
           src="assets/circle_medical_science.png"
           class="circle-image"
-          id="circle2"
+          id="circleMedical"
+          onmouseover="hoverMedical()" title="fetching data"
           onclick="window.location.href = constructURL('medical-sciences')"
         />
         <img
           src="assets/circle_applied_science.png"
           class="circle-image"
-          id="circle3"
+          id="circleApplied"
+          onmouseover="hoverApplied()" title="fetching data"
           onclick="window.location.href = constructURL('applied-sciences')"
         />
         <img
           src="assets/circle_social_science.png"
           class="circle-image"
-          id="circle4"
+          id="circleSocial"
+          onmouseover="hoverSocial()" title="fetching data"
           onclick="window.location.href = constructURL('social-sciences')"
         />
         <img
           src="assets/circle_natural_science.png"
           class="circle-image"
-          id="circle5"
+          id="circleNatural"
+          onmouseover="hoverNatural()" title="fetching data"
           onclick="window.location.href = constructURL('natural-sciences')"
         />
       </div>
     </div>
+    <script src="../../serverUrl.js"></script>
+    <script src="../../dashboard.js"></script>
     <script>
       function positionCircles() {
         const container = document.querySelector(".circle-container")
@@ -86,7 +93,31 @@
           image.style.top = `${y}px`
         })
       }
-
+      function hoverNatural() {
+        if (document.getElementById('circleNatural').title == "fetching data") dashboard("sciencetechnology", 
+          "/subs/sciencetechnology?subs=Astronomy,Botany,Chemistry,EarthSciences,Ecology,Physics",
+          "circleNatural");
+      }
+      function hoverSocial() {
+        if (document.getElementById('circleSocial').title == "fetching data") dashboard("sciencetechnology", 
+          "/subs/sciencetechnology?subs=PoliticalScience,History",
+          "circleSocial");
+      }
+      function hoverMedical() {
+        if (document.getElementById('circleMedical').title == "fetching data") dashboard("sciencetechnology", 
+          "/subs/sciencetechnology?subs=FoodScience,HealthCare,Nursing",
+          "circleMedical");
+      }
+      function hoverFormal() {
+        if (document.getElementById('circleFormal').title == "fetching data") dashboard("sciencetechnology", 
+          "/subs/sciencetechnology?subs=Mathematics,Physics,Chemistry",
+          "circleFormal");
+      }
+      function hoverApplied() {
+        if (document.getElementById('circleApplied').title == "fetching data") dashboard("sciencetechnology", 
+          "/subs/sciencetechnology?subs=Lingustics,MilitaryScience,Chemistry,PoliticalScience,History",
+          "circleApplied");
+      }
       window.onload = positionCircles
       window.onresize = positionCircles
     </script>

@@ -1,3 +1,16 @@
+
+function dashboard(jsonKey, prefix, circle) {
+  dash = dashboardCounts(jsonKey, prefix);
+  dash.then(value => {
+    // console.log(value);
+    const elemen = document.getElementById(circle);
+    let s = JSON.stringify(value).slice(1,-1);
+    elemen.setAttribute('title', s.replace(/"/g, ' '));
+  })
+  .catch(error => {
+    console.error("Error in one of the promises:", error);
+  });
+}
 function dashboardCounts(jsonKey, prefix) {
   return fetch(serverUrlPort() + prefix)
     .then(response => response.json())

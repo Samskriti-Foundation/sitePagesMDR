@@ -38,7 +38,9 @@
         align-items: center;
         padding: 5px 20px;
     }
-
+    .nav-button:hover:before {
+        content:"hint: try login with user - guest@mailinator.com and password - guest";
+    }
     .nav-button i {
         color: white;
     }
@@ -140,10 +142,10 @@
         <img class="TIPimage" src="./assets/TIP.png" alt="">
         <img class="orangeLeaf" src="./assets/orangeLeaf.png" alt="">
         <img class="greenLeaf" src="./assets/greenLeaf.png" alt="">
-        <a href="orthodox-systems/index.html">
+        <a href="orthodox-systems/index.html" title="fetching data" id="orthodox" onmouseover="hoverOrthodox()">
             <h3 class="orthodoxSystems"><span style="color:rgb(139, 36, 1)">आस्तिक दर्शनम्</span><br> Orthodox Systems</h3>
         </a>
-        <a href="heterodox-systems/index.html">
+        <a href="heterodox-systems/index.html" title="fetching data" id="heterodox" onmouseover="hoverHeterodox()">
             <h3 class="HeterodoxSystems"><span style="color:rgb(139, 36, 1)">नास्तिक दर्शनम्</span><br> Heterodox Systems</h3>
         </a>
     </div>
@@ -152,7 +154,20 @@
     lucide.createIcons()
 </script>
 <script src="../../serverUrl.js"></script>
+<script src="../../dashboard.js"></script>
 <script>updateButtonOnclickWithRegex(); // update the onclick URLs with the server IP and port</script>
+<script>
+    function hoverOrthodox() {
+      if (document.getElementById('orthodox').title == "fetching data") dashboard("philosophy", 
+      "/subs/philosophy?subs=Nyaya,Vaisesika,Nyaya and Vaisesika,Purva Mimamsa,Purva and Uttara Mimamsa,Sankhya and Yoga,Uttara Mimamsa",
+       "orthodox");
+    }
+    function hoverHeterodox() {
+      if (document.getElementById('heterodox').title == "fetching data") dashboard("philosophy",
+       "/subs/philosophy?subs=Jaina,Bauddha,Carvaka",
+        "heterodox");
+    }
+</script>
 </html>
 
 
